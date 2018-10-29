@@ -15,7 +15,7 @@ body,html {
 .wrapper{
   z-index: 1;
   position: fixed;
-  top: 5rem;
+  top: 4rem;
   margin: 0 100px;
 }
 .keys {
@@ -28,74 +28,62 @@ body,html {
 }
 
 .key-chase {
-  border: .4rem solid black;
+  border: .4rem solid #2b4083;
   border-radius: .5rem;
   margin: 1rem;
-  font-size: 1.5rem;
   transition: all .07s ease;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.2);
   text-shadow: 0 0 .5rem black;
 }
 
 .key-marshall {
-  border: .4rem solid black;
+  border: .4rem solid #d2232a;
   border-radius: .5rem;
   margin: 1rem;
-  font-size: 1.5rem;
   transition: all .07s ease;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.2);
   text-shadow: 0 0 .5rem black;
 }
 
 .key-skye {
-  border: .4rem solid black;
+  border: .4rem solid #d283a3;
   border-radius: .5rem;
   margin: 1rem;
-  font-size: 1.5rem;
   transition: all .07s ease;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.2);
   text-shadow: 0 0 .5rem black;
 }
 
 .key-rubble {
-  border: .4rem solid black;
+  border: .4rem solid #f8e600;
   border-radius: .5rem;
   margin: 1rem;
-  font-size: 1.5rem;
   transition: all .07s ease;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.2);
   text-shadow: 0 0 .5rem black;
 }
 
 .key-rocky {
-  border: .4rem solid black;
+  border: .4rem solid #489a45;
   border-radius: .5rem;
   margin: 1rem;
-  font-size: 1.5rem;
   transition: all .07s ease;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.2);
   text-shadow: 0 0 .5rem black;
 }
 
 .key-zuma {
-  border: .4rem solid black;
+  border: .4rem solid #ed6c35;
   border-radius: .5rem;
   margin: 1rem;
-  font-size: 1.5rem;
   transition: all .07s ease;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.2);
   text-shadow: 0 0 .5rem black;
 }
 
