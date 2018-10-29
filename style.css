@@ -14,9 +14,9 @@ body,html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 70em;
-  height: 50em;
+  height: 49em;
   padding-left: 25%;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .key {
