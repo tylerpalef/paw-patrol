@@ -27,7 +27,19 @@ body,html {
   padding-top: 5%;
 }
 
-.key {
+.key-chase {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  transition: all .07s ease;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  text-shadow: 0 0 .5rem black;
+}
+
+.key-marshall {
   border: .4rem solid black;
   border-radius: .5rem;
   margin: 1rem;

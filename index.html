@@ -15,9 +15,9 @@
     <div class="wrapper">
       <div class="keys">
         <!-- Use keycode.info to determine the key values  -->
-        
+
         <!-- Chase -->
-        <div data-key="49" class="key">
+        <div data-key="49" class="key-chase">
           <kbd>
         <img src="https://i.postimg.cc/MG3LLd2g/chase.png" height=80% width=80%>
       </kbd>
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Marshall -->
-        <div data-key="50" class="key">
+        <div data-key="50" class="key-marshall">
           <kbd>
       <img src="https://i.postimg.cc/h4dYCLC3/marshall.png" height=80% width=80%>
     </kbd>
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Skye -->
-        <div data-key="51" class="key">
+        <div data-key="51" class="key-skye">
           <kbd>
       <img src="https://i.postimg.cc/C1WQh5KN/skye.png" height=85% width=85%>
       </kbd>
@@ -41,7 +41,7 @@
         </div>
 
         <!-- Rubble -->
-        <div data-key="52" class="key">
+        <div data-key="52" class="key-rubble">
           <kbd>
         <img src="https://i.postimg.cc/d3rSLFkK/rubble.png" height=80% width=80%>
       </kbd>
@@ -49,7 +49,7 @@
         </div>
 
         <!-- Rocky -->
-        <div data-key="53" class="key">
+        <div data-key="53" class="key-rocky">
           <kbd>
         <img src="https://i.postimg.cc/8zvPNKbQ/rocky.png" height=70% width=70%>
       </kbd>
@@ -57,7 +57,7 @@
         </div>
 
         <!-- Zuma -->
-        <div data-key="54" class="key">
+        <div data-key="54" class="key-zuma">
           <kbd>
       <img src="https://i.postimg.cc/5NWRDXT9/zuma.png" height=80% width=80%>
       </kbd>
@@ -67,12 +67,12 @@
       </div>
     </div>
 
-    <audio data-key="49" src="sounds/clap.wav"></audio>
-    <audio data-key="50" src="sounds/hihat.wav"></audio>
-    <audio data-key="51" src="sounds/kick.wav"></audio>
-    <audio data-key="52" src="sounds/openhat.wav"></audio>
-    <audio data-key="53" src="sounds/boom.wav"></audio>
-    <audio data-key="54" src="sounds/ride.wav"></audio>
+    <audio data-key="49" src="#"></audio>
+    <audio data-key="50" src="#"></audio>
+    <audio data-key="51" src="#"></audio>
+    <audio data-key="52" src="#"></audio>
+    <audio data-key="53" src="#"></audio>
+    <audio data-key="54" src="#wav"></audio>
 
     <script>
       function removeTransition(e) {
@@ -90,9 +90,25 @@
         audio.play();
       }
 
-      const keys = Array.from(document.querySelectorAll('.key'));
-      keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+      const keysChase = Array.from(document.querySelectorAll('.key-chase'));
+      keysChase.forEach(key => key.addEventListener('transitionend', removeTransition));
       window.addEventListener('keydown', playSound);
+      
+      const keysMarshall = Array.from(document.querySelectorAll('.key-marshall'));
+      keysMarshall.forEach(key => key.addEventListener('transitionend', removeTransition));
+      window.addEventListener('keydown', playSound);
+      //
+      // const keysSkye = Array.from(document.querySelectorAll('.key-skye'));
+      // keysSkye.forEach(key => key.addEventListener('transitionend', removeTransition));
+      // window.addEventListener('keydown', playSound);
+      //
+      // const keysChase = Array.from(document.querySelectorAll('.key-chase'));
+      // keysChase.forEach(key => key.addEventListener('transitionend', removeTransition));
+      // window.addEventListener('keydown', playSound);
+      //
+      // const keysChase = Array.from(document.querySelectorAll('.key-chase'));
+      // keysChase.forEach(key => key.addEventListener('transitionend', removeTransition));
+      // window.addEventListener('keydown', playSound);
     </script>
 
 
