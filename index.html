@@ -1,95 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Paw Patrol</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
 </head>
+
 <body>
   <div class="bg">
     <img src="https://i.postimg.cc/VvvGY1Yg/paw-patrolbg.jpg" height=100% width=100%>
   </div>
-  <div class="wrapper">
-  <div class="keys"> <!-- Use keycode.info to determine the key values  -->
-  <!-- Chase -->
-    <div data-key="49" class="key">
-      <kbd>
+    <div class="wrapper">
+      <div class="keys">
+        <!-- Use keycode.info to determine the key values  -->
+        
+        <!-- Chase -->
+        <div data-key="49" class="key">
+          <kbd>
         <img src="https://i.postimg.cc/MG3LLd2g/chase.png" height=80% width=80%>
       </kbd>
-      <span class="sound">1</span>
-    </div>
+          <span class="sound">1</span>
+        </div>
 
-  <!-- Marshall -->
-    <div data-key="50" class="key">
-      <kbd>
+        <!-- Marshall -->
+        <div data-key="50" class="key">
+          <kbd>
       <img src="https://i.postimg.cc/h4dYCLC3/marshall.png" height=80% width=80%>
     </kbd>
-      <span class="sound">2</span>
-    </div>
+          <span class="sound">2</span>
+        </div>
 
-  <!-- Skye -->
-    <div data-key="51" class="key">
-      <kbd>
+        <!-- Skye -->
+        <div data-key="51" class="key">
+          <kbd>
       <img src="https://i.postimg.cc/C1WQh5KN/skye.png" height=85% width=85%>
       </kbd>
-      <span class="sound">3</span>
-    </div>
+          <span class="sound">3</span>
+        </div>
 
-  <!-- Rubble -->
-    <div data-key="52" class="key">
-      <kbd>
+        <!-- Rubble -->
+        <div data-key="52" class="key">
+          <kbd>
         <img src="https://i.postimg.cc/d3rSLFkK/rubble.png" height=80% width=80%>
       </kbd>
-      <span class="sound">4</span>
-    </div>
+          <span class="sound">4</span>
+        </div>
 
-  <!-- Rocky -->
-    <div data-key="53" class="key">
-      <kbd>
+        <!-- Rocky -->
+        <div data-key="53" class="key">
+          <kbd>
         <img src="https://i.postimg.cc/8zvPNKbQ/rocky.png" height=70% width=70%>
       </kbd>
-      <span class="sound">5</span>
-    </div>
+          <span class="sound">5</span>
+        </div>
 
-  <!-- Zuma -->
-    <div data-key="54" class="key">
-      <kbd>
+        <!-- Zuma -->
+        <div data-key="54" class="key">
+          <kbd>
       <img src="https://i.postimg.cc/5NWRDXT9/zuma.png" height=80% width=80%>
       </kbd>
-      <span class="sound">6</span>
+          <span class="sound">6</span>
+        </div>
+
+      </div>
     </div>
 
-  </div>
-</div>
+    <audio data-key="49" src="sounds/clap.wav"></audio>
+    <audio data-key="50" src="sounds/hihat.wav"></audio>
+    <audio data-key="51" src="sounds/kick.wav"></audio>
+    <audio data-key="52" src="sounds/openhat.wav"></audio>
+    <audio data-key="53" src="sounds/boom.wav"></audio>
+    <audio data-key="54" src="sounds/ride.wav"></audio>
 
-  <audio data-key="49" src="sounds/clap.wav"></audio>
-  <audio data-key="50" src="sounds/hihat.wav"></audio>
-  <audio data-key="51" src="sounds/kick.wav"></audio>
-  <audio data-key="52" src="sounds/openhat.wav"></audio>
-  <audio data-key="53" src="sounds/boom.wav"></audio>
-  <audio data-key="54" src="sounds/ride.wav"></audio>
+    <script>
+      function removeTransition(e) {
+        if (e.propertyName !== 'transform') return;
+        e.target.classList.remove('playing');
+      }
 
-<script>
-  function removeTransition(e) {
-    if (e.propertyName !== 'transform') return;
-    e.target.classList.remove('playing');
-  }
+      function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+        if (!audio) return;
 
-  function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    if (!audio) return;
+        key.classList.add('playing');
+        audio.currentTime = 0;
+        audio.play();
+      }
 
-    key.classList.add('playing');
-    audio.currentTime = 0;
-    audio.play();
-  }
-
-  const keys = Array.from(document.querySelectorAll('.key'));
-  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-  window.addEventListener('keydown', playSound);
-</script>
+      const keys = Array.from(document.querySelectorAll('.key'));
+      keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+      window.addEventListener('keydown', playSound);
+    </script>
 
 
 </body>
+
 </html>

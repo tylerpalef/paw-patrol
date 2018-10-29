@@ -1,11 +1,11 @@
 html {
-  font-size: 10px;
+  font-size: 10px; /* Dictates the size of the pup grid */
 }
 
 body,html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Baloo Bhaijaan', cursive; /* Just setting the font for the numbers  */
 }
 
 .background{
@@ -51,8 +51,7 @@ kbd {
 }
 
 .sound {
-  font-size: 1.2rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
   color: #ffc600;
 }
