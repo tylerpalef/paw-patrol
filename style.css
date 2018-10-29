@@ -1,8 +1,5 @@
 html {
   font-size: 10px;
-  background: url(https://i.postimg.cc/VvvGY1Yg/paw-patrolbg.jpg) center;
-  background: contain;
-  display: fixed;
 }
 
 body,html {
@@ -11,6 +8,16 @@ body,html {
   font-family: sans-serif;
 }
 
+.background{
+  z-index: 0;
+}
+
+.wrapper{
+  z-index: 1;
+  position: fixed;
+  top: 5rem;
+  margin: 0 100px;
+}
 .keys {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
