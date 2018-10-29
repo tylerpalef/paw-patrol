@@ -15,7 +15,8 @@ body,html {
   grid-template-columns: 1fr 1fr 1fr;
   width: 70em;
   height: 50em;
-
+  padding-left: 25%;
+  padding-top: 10%;
 }
 
 .key {
