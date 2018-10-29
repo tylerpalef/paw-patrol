@@ -1,7 +1,7 @@
 html {
   font-size: 10px;
   background: url(https://i.postimg.cc/VvvGY1Yg/paw-patrolbg.jpg) bottom center;
-  background-size: cover;
+  background: contain;
 }
 
 body,html {
@@ -13,8 +13,9 @@ body,html {
 .keys {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
+  width: 70em;
   height: 50em;
+
 }
 
 .key {
