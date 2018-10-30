@@ -7,7 +7,7 @@
     /* Just setting the font for the numbers  */
   }
 
-  .bg {
+  .bg { /* Pretty straight forward, this is the background */
     z-index: 0;
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@
     width: 100%;
   }
 
-  .keys {
+  .keys { /* This is the main grid with the pups */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 170%;
@@ -25,11 +25,13 @@
     left: 45%;
   }
 
-  .wrapper {
+  .wrapper { /* This houses the pups on the page */
     z-index: 1;
     position: absolute;
     padding-left: 33%;
   }
+
+  /* Each pup has their own individual styling on the grid */
 
   .key-chase {
     border: .4rem solid #2b4083;
@@ -91,28 +93,34 @@
     text-shadow: 0 0 .5rem black;
   }
 
-  .playing {
+  .playing { /* This is the animation for the pups when they are selected via click or key down*/
     transform: scale(1.1);
     border-color: white;
     box-shadow: 0 0 1rem white;
   }
 
-  kbd {
+  kbd { /* This impacts the sizing of the pup grid */
     display: block;
     font-size: 4rem;
   }
 
-  .sound {
+  .sound { /* This is the text to click the numbers */
     font-size: 3rem;
     text-transform: uppercase;
     color: white;
   }
 
-  #bt {
+  #bt { /* This ID allows the button to work for the pups */
+
     border-style: none;
     border-width: 0;
     padding: 0;
     background: content-box;
+  }
+
+  button:focus { /* This removes the blue line from the selected pup as they are buttons */
+
+    outline:0;
   }
 
   @media only screen and (max-width: 1210px) {

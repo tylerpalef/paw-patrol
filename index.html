@@ -166,6 +166,9 @@
     var key = document.createElement('audio');
 
     audioElement.setAttribute('src', path);
+
+    // This last bit of code should stop the mouse click spam. Instead audioElement returns as  "<audio src="assets/audio/marshall-audio.wav"></audio>"
+    // While the working version of audio on button click returns "<audio src="assets/audio/marshall-audio.wav"></audio>"
     audioElement.currentTime = 0;
     audioElement.play();
   }
