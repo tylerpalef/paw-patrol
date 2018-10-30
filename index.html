@@ -158,7 +158,9 @@
     function playSoundClick(path) { // This plays the audio clip on mouse click of the button
       var audioElement = document.createElement('audio');
       var key = document.createElement('audio');
+      
       audioElement.setAttribute('src', path);
+
       key.classList.add('playing');
       audioElement.currentTime = 0;
       audioElement.play();
