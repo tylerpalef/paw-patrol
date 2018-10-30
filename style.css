@@ -1,31 +1,30 @@
-@media all and (max-width: 991px) {
+@media all and (min-width: 480px) {
   html {
-    font-size: 8px; /* Dictates the size of the pup grid */
+    font-size: 10px; /* Dictates the size of the pup grid */
     margin: 0;
     padding: 0;
     font-family: 'Baloo Bhaijaan', cursive; /* Just setting the font for the numbers  */
   }
 
-  .background{
+  .bg{
     z-index: 0;
-    background-size: cover;
     margin: 0;
     padding: 0;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
   }
 
   .wrapper{
     z-index: 1;
     position: absolute;
-    bottom: 20%;
-    right: 24.5%;
   }
   .keys {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 70em;
-    height: 49em;
-    padding-left: 25%;
-    padding-top: 5%;
+    grid-template-columns: 1fr 1fr;
+
   }
 
   .key-chase {
@@ -106,8 +105,3 @@
   }
 
 }
-/* @media all and (max-width: 768px) {
-
-}
-@media all and (max-width: 480px) {
-} */
