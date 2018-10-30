@@ -80,8 +80,8 @@
       }
 
       function playSound(e) {
-        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-        const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+        var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        var key = document.querySelector(`div[data-key="${e.keyCode}"]`);
         if (!audio) return;
 
         key.classList.add('playing');
@@ -89,25 +89,27 @@
         audio.play();
       }
 
-      const keysChase = document.querySelectorAll('.key-chase');
+      var keysChase = document.querySelectorAll('.key-chase'); // Selects Chase div
       keysChase.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      const keysMarshall = document.querySelectorAll('.key-marshall');
+      var keysMarshall = document.querySelectorAll('.key-marshall'); // Selects Marshall div
       keysMarshall.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      const keysSkye = document.querySelectorAll('.key-skye');
+      var keysSkye = document.querySelectorAll('.key-skye'); // Selects Skye div
       keysSkye.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      const keysRubble = document.querySelectorAll('.key-rubble');
+      var keysRubble = document.querySelectorAll('.key-rubble'); // Selects Rubble
       keysRubble.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      const keysRocky = document.querySelectorAll('.key-rocky');
+      var keysRocky = document.querySelectorAll('.key-rocky'); // Selects Rocky
       keysRocky.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      const keysZuma = document.querySelectorAll('.key-zuma');
+      var keysZuma = document.querySelectorAll('.key-zuma'); // Selects Zuma
       keysZuma.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      window.addEventListener('keydown', playSound);
+      window.addEventListener('keydown', playSound); // This places the audio clip
+
+
     </script>
 
 
