@@ -1,105 +1,113 @@
-html {
-  font-size: 10px; /* Dictates the size of the pup grid */
-}
+/* @media all and (max-width: 991px) {  */
+  html {
+    font-size: 10px; /* Dictates the size of the pup grid */
+  }
 
-body,html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Baloo Bhaijaan', cursive; /* Just setting the font for the numbers  */
-}
+  body,html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Bhaijaan', cursive; /* Just setting the font for the numbers  */
+  }
 
-.background{
-  z-index: 0;
-}
+  .background{
+    z-index: 0;
+  }
 
-.wrapper{
-  z-index: 1;
-  position: fixed;
-  top: 4rem;
-  margin: 0 100px;
-}
-.keys {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 70em;
-  height: 49em;
-  padding-left: 25%;
-  padding-top: 5%;
-}
+  .wrapper{
+    z-index: 1;
+    position: fixed;
+    top: 4rem;
+    margin: 0 100px;
+  }
+  .keys {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70em;
+    height: 49em;
+    padding-left: 25%;
+    padding-top: 5%;
+  }
 
-.key-chase {
-  border: .4rem solid #2b4083;
-  border-radius: .5rem;
-  margin: 1rem;
-  transition: all .07s ease;
-  text-align: center;
-  background: rgba(211,48,49,0.2);
-  text-shadow: 0 0 .5rem black;
-}
+  .key-chase {
+    border: .4rem solid #2b4083;
+    border-radius: .5rem;
+    margin: 1rem;
+    transition: all .07s ease;
+    text-align: center;
+    background: rgba(211,48,49,0.2);
+    text-shadow: 0 0 .5rem black;
+  }
 
-.key-marshall {
-  border: .4rem solid #d2232a;
-  border-radius: .5rem;
-  margin: 1rem;
-  transition: all .07s ease;
-  text-align: center;
-  background: rgba(254,236,2,0.2);
-  text-shadow: 0 0 .5rem black;
-}
+  .key-marshall {
+    border: .4rem solid #d2232a;
+    border-radius: .5rem;
+    margin: 1rem;
+    transition: all .07s ease;
+    text-align: center;
+    background: rgba(254,236,2,0.2);
+    text-shadow: 0 0 .5rem black;
+  }
 
-.key-skye {
-  border: .4rem solid #d283a3;
-  border-radius: .5rem;
-  margin: 1rem;
-  transition: all .07s ease;
-  text-align: center;
-  background: rgba(227,56,148,0.2);
-  text-shadow: 0 0 .5rem black;
-}
+  .key-skye {
+    border: .4rem solid #d283a3;
+    border-radius: .5rem;
+    margin: 1rem;
+    transition: all .07s ease;
+    text-align: center;
+    background: rgba(227,56,148,0.2);
+    text-shadow: 0 0 .5rem black;
+  }
 
-.key-rubble {
-  border: .4rem solid #f8e600;
-  border-radius: .5rem;
-  margin: 1rem;
-  transition: all .07s ease;
-  text-align: center;
-  background: rgba(245,140,31,0.2);
-  text-shadow: 0 0 .5rem black;
-}
+  .key-rubble {
+    border: .4rem solid #f8e600;
+    border-radius: .5rem;
+    margin: 1rem;
+    transition: all .07s ease;
+    text-align: center;
+    background: rgba(245,140,31,0.2);
+    text-shadow: 0 0 .5rem black;
+  }
 
-.key-rocky {
-  border: .4rem solid #489a45;
-  border-radius: .5rem;
-  margin: 1rem;
-  transition: all .07s ease;
-  text-align: center;
-  background: rgba(25,120,180,0.2);
-  text-shadow: 0 0 .5rem black;
-}
+  .key-rocky {
+    border: .4rem solid #489a45;
+    border-radius: .5rem;
+    margin: 1rem;
+    transition: all .07s ease;
+    text-align: center;
+    background: rgba(25,120,180,0.2);
+    text-shadow: 0 0 .5rem black;
+  }
 
-.key-zuma {
-  border: .4rem solid #ed6c35;
-  border-radius: .5rem;
-  margin: 1rem;
-  transition: all .07s ease;
-  text-align: center;
-  background: rgba(187,136,0.2);
-  text-shadow: 0 0 .5rem black;
-}
+  .key-zuma {
+    border: .4rem solid #ed6c35;
+    border-radius: .5rem;
+    margin: 1rem;
+    transition: all .07s ease;
+    text-align: center;
+    background: rgba(187,136,0.2);
+    text-shadow: 0 0 .5rem black;
+  }
 
-.playing {
-  transform: scale(1.1);
-  border-color: white;
-  box-shadow: 0 0 1rem white;
-}
+  .playing {
+    transform: scale(1.1);
+    border-color: white;
+    box-shadow: 0 0 1rem white;
+  }
 
-kbd {
-  display: block;
-  font-size: 4rem;
-}
+  kbd {
+    display: block;
+    font-size: 4rem;
+  }
 
-.sound {
-  font-size: 3rem;
-  text-transform: uppercase;
-  color: white;
+  .sound {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+  }
+
+/* }
+@media all and (max-width: 768px) {
+
 }
+@media all and (max-width: 480px) {
+} */
