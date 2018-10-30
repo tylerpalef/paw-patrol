@@ -12,9 +12,9 @@
 
   .wrapper{
     z-index: 1;
-    position: relative;
-    bottom: 68em;
-    right: 6em;
+    position: absolute;
+    bottom: 20%;
+    right: 24.5%;
   }
   .keys {
     display: grid;
