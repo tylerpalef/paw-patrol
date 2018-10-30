@@ -107,6 +107,13 @@
     color: white;
   }
 
+  button{
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+    background: content-box;
+  }
+
   @media only screen and (max-width: 1210px) {
     .keys{
       grid-template-columns: 1fr 1fr 1fr;
