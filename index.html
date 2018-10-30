@@ -3,19 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Very important for responsive design -->
   <title>Paw Patrol</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!--This links to the css file -->
+  <!-- <script src="javascript.js"></script> --> <!-- This is to link to the JS file -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet"> <!-- Font stylesheet reference -->
 </head>
 
 <body>
   <div class="bg">
-    <img src="https://i.postimg.cc/VvvGY1Yg/paw-patrolbg.jpg" height=100% width=100%>
+    <img src="https://i.postimg.cc/VvvGY1Yg/paw-patrolbg.jpg" height=100% width=100%> <!-- BG image set to fill the page -->
   </div>
-    <div class="wrapper">
-      <div class="keys">
+    <div class="wrapper"> <!-- Wrapper of the grid -->
+      <div class="keys"> <!-- This is the grid of the pups -->
         <!-- Use keycode.info to determine the key values  -->
+
         <!-- Chase -->
         <div data-key="49" class="key-chase">
           <kbd>
@@ -74,45 +76,51 @@
     <audio data-key="53" src="assets/audio/rocky-audio.wav"></audio>
     <audio data-key="54" src="assets/audio/zuma-audio.wav"></audio>
 
-    <script>
-      function removeTransition(e) {
-        if (e.propertyName !== 'transform') return;
-        e.target.classList.remove('playing');
-      }
+<script>
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return;
+  e.target.classList.remove('playing');
+}
 
-      function playSound(e) {
-        var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-        var key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-        if (!audio) return;
+function playSound(e) {
+  var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  var key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+  if (!audio) return;
 
-        key.classList.add('playing');
-        audio.currentTime = 0;
-        audio.play();
-      }
+  key.classList.add('playing');
+  audio.currentTime = 0;
+  audio.play();
+}
 
-      var keysChase = document.querySelectorAll('.key-chase'); // Selects Chase div
-      keysChase.forEach(key => key.addEventListener('transitionend', removeTransition));
+var keysChase = document.querySelectorAll('.key-chase'); // Selects Chase div
+keysChase.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      var keysMarshall = document.querySelectorAll('.key-marshall'); // Selects Marshall div
-      keysMarshall.forEach(key => key.addEventListener('transitionend', removeTransition));
+var keysMarshall = document.querySelectorAll('.key-marshall'); // Selects Marshall div
+keysMarshall.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      var keysSkye = document.querySelectorAll('.key-skye'); // Selects Skye div
-      keysSkye.forEach(key => key.addEventListener('transitionend', removeTransition));
+var keysSkye = document.querySelectorAll('.key-skye'); // Selects Skye div
+keysSkye.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      var keysRubble = document.querySelectorAll('.key-rubble'); // Selects Rubble
-      keysRubble.forEach(key => key.addEventListener('transitionend', removeTransition));
+var keysRubble = document.querySelectorAll('.key-rubble'); // Selects Rubble
+keysRubble.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      var keysRocky = document.querySelectorAll('.key-rocky'); // Selects Rocky
-      keysRocky.forEach(key => key.addEventListener('transitionend', removeTransition));
+var keysRocky = document.querySelectorAll('.key-rocky'); // Selects Rocky
+keysRocky.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      var keysZuma = document.querySelectorAll('.key-zuma'); // Selects Zuma
-      keysZuma.forEach(key => key.addEventListener('transitionend', removeTransition));
+var keysZuma = document.querySelectorAll('.key-zuma'); // Selects Zuma
+keysZuma.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-      window.addEventListener('keydown', playSound); // This places the audio clip
+window.addEventListener('keydown', playSound); // This places the audio clip
+
+keysChase.forEach(key => key.addEventListener("click", function(){ console.log("Chase"); }));
+keysMarshall.forEach(key => key.addEventListener("click", function(){ console.log("Marshall"); }));
+keysSkye.forEach(key => key.addEventListener("click", function(){ console.log("Skye"); }));
+keysRubble.forEach(key => key.addEventListener("click", function(){ console.log("Rubble"); }));
+keysRocky.forEach(key => key.addEventListener("click", function(){ console.log("Rocky"); }));
+keysZuma.forEach(key => key.addEventListener("click", function(){ console.log("Zuma"); }));
 
 
-    </script>
-
+</script>
 
 </body>
 
