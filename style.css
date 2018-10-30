@@ -7,122 +7,122 @@
     /* Just setting the font for the numbers  */
   }
 
-  .bg {
-    z-index: 0;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-  }
+.bg {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
 
+.keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 170%;
+  position: absolute;
+  left: 45%;
+}
+
+.wrapper {
+  z-index: 1;
+  position: absolute;
+  padding-left: 33%;
+}
+
+.key-chase {
+  border: .4rem solid #2b4083;
+  border-radius: 6rem;
+  margin: 1rem;
+  transition: all .07s ease;
+  text-align: center;
+  background: rgba(211, 48, 49, 0.2);
+  text-shadow: 0 0 .5rem black;
+}
+
+.key-marshall {
+  border: .4rem solid #d2232a;
+  border-radius: 6rem;
+  margin: 1rem;
+  transition: all .07s ease;
+  text-align: center;
+  background: rgba(254, 236, 2, 0.2);
+  text-shadow: 0 0 .5rem black;
+}
+
+.key-skye {
+  border: .4rem solid #d283a3;
+  border-radius: 6rem;
+  margin: 1rem;
+  transition: all .07s ease;
+  text-align: center;
+  background: rgba(227, 56, 148, 0.2);
+  text-shadow: 0 0 .5rem black;
+}
+
+.key-rubble {
+  border: .4rem solid #f8e600;
+  border-radius: 6rem;
+  margin: 1rem;
+  transition: all .07s ease;
+  text-align: center;
+  background: rgba(245, 140, 31, 0.2);
+  text-shadow: 0 0 .5rem black;
+}
+
+.key-rocky {
+  border: .4rem solid #489a45;
+  border-radius: 6rem;
+  margin: 1rem;
+  transition: all .07s ease;
+  text-align: center;
+  background: rgba(25, 120, 180, 0.2);
+  text-shadow: 0 0 .5rem black;
+}
+
+.key-zuma {
+  border: .4rem solid #ed6c35;
+  border-radius: 6rem;
+  margin: 1rem;
+  transition: all .07s ease;
+  text-align: center;
+  background: rgba(1, 87, 136, 0.2);
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: white;
+  box-shadow: 0 0 1rem white;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+#bt {
+  border-style: none;
+  border-width: 0;
+  padding: 0;
+  background: content-box;
+}
+
+@media only screen and (max-width: 1210px) {
   .keys {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 170%;
-    position: absolute;
-    left: 50%;
+    width: 200%;
   }
 
-  .wrapper {
-    z-index: 1;
-    position: absolute;
-    padding-left: 33%;
-  }
-
-  .key-chase {
-    border: .4rem solid #2b4083;
-    border-radius: 6rem;
-    margin: 1rem;
-    transition: all .07s ease;
-    text-align: center;
-    background: rgba(211, 48, 49, 0.2);
-    text-shadow: 0 0 .5rem black;
-  }
-
-  .key-marshall {
-    border: .4rem solid #d2232a;
-    border-radius: 6rem;
-    margin: 1rem;
-    transition: all .07s ease;
-    text-align: center;
-    background: rgba(254, 236, 2, 0.2);
-    text-shadow: 0 0 .5rem black;
-  }
-
-  .key-skye {
-    border: .4rem solid #d283a3;
-    border-radius: 6rem;
-    margin: 1rem;
-    transition: all .07s ease;
-    text-align: center;
-    background: rgba(227, 56, 148, 0.2);
-    text-shadow: 0 0 .5rem black;
-  }
-
-  .key-rubble {
-    border: .4rem solid #f8e600;
-    border-radius: 6rem;
-    margin: 1rem;
-    transition: all .07s ease;
-    text-align: center;
-    background: rgba(245, 140, 31, 0.2);
-    text-shadow: 0 0 .5rem black;
-  }
-
-  .key-rocky {
-    border: .4rem solid #489a45;
-    border-radius: 6rem;
-    margin: 1rem;
-    transition: all .07s ease;
-    text-align: center;
-    background: rgba(25, 120, 180, 0.2);
-    text-shadow: 0 0 .5rem black;
-  }
-
-  .key-zuma {
-    border: .4rem solid #ed6c35;
-    border-radius: 6rem;
-    margin: 1rem;
-    transition: all .07s ease;
-    text-align: center;
-    background: rgba(1, 87, 136, 0.2);
-    text-shadow: 0 0 .5rem black;
-  }
-
-  .playing {
-    transform: scale(1.1);
-    border-color: white;
-    box-shadow: 0 0 1rem white;
-  }
-
-  kbd {
-    display: block;
-    font-size: 4rem;
-  }
-
-  .sound {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: white;
-  }
-
-  #bt {
-    border-style: none;
-    border-width: 0;
-    padding: 0;
-    background: content-box;
-  }
-
-  @media only screen and (max-width: 1210px) {
+@media only screen and (max-width: 600px) {
     .keys {
-      grid-template-columns: 1fr 1fr 1fr;
-      width: 200%;
+      grid-template-columns: 1fr 1fr;
+      width: 205%;
     }
-
-    @media only screen and (max-width: 600px) {
-      .keys {
-        grid-template-columns: 1fr 1fr;
-        width: 205%;
-      }

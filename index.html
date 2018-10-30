@@ -116,10 +116,10 @@
     }
 
     var keysChase = document.querySelectorAll('.key-chase'); // Selects Chase div
-    keysChase.forEach(key => key.addEventListener('transitionend', removeTransition)); // This plays  the pup's position
-    keysChase.forEach(key => key.addEventListener("click", function() {
-      console.log("Chase");
-    })); // This logs the pup name in the console
+    // keysChase.forEach(key => key.addEventListener('transitionend', removeTransition)); // This plays  the pup's position
+    // keysChase.forEach(key => key.addEventListener("click", function() {
+    //   console.log("Chase");
+    // })); // This logs the pup name in the console
 
 
     var keysMarshall = document.querySelectorAll('.key-marshall'); // Selects Marshall div
@@ -152,19 +152,30 @@
       console.log("Zuma");
     }));
 
-
     window.addEventListener('keydown', playSound); // This plays the audio clip on key keydown
 
     function playSoundClick(path) { // This plays the audio clip on mouse click of the button
-      var audioElement = document.createElement('audio');
+      var audioElement = document.createElement('audio'); // this comes back as
+      // audioElement = audio {error: null, src: "file:///Users/tylerpalef/Desktop/pawpatrol/assets/audio/chase-audio.wav", currentSrc: "", crossOrigin: null, networkState: 3, …}
+
       var key = document.createElement('audio');
+      // key = audio.playing {error: null, src: "", currentSrc: "", crossOrigin: null, networkState: 0, …}
 
       audioElement.setAttribute('src', path);
 
-      key.classList.add('playing');
+      key.classList.add('playing'); // This is what causes the animation to occur, but key is null
+      // key = audio.playing {error: null, src: "", currentSrc: "", crossOrigin: null, networkState: 0, …}
+
       audioElement.currentTime = 0;
       audioElement.play();
     }
+
+    testing = (e) => {
+      console.log(e);
+    }
+    var keysChase2 = document.querySelector('.key-chase')
+    keysChase2.addEventListener('click', testing);
+
   </script>
 
 </body>
