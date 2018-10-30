@@ -24,7 +24,7 @@
 
       <!-- Chase -->
       <button id="bt" type="button"
-          onclick="javascript:PlaySound('assets/audio/chase-audio.wav');">
+          onclick="javascript:playSoundClick('assets/audio/chase-audio.wav');">
         <div data-key="49" class="key-chase">
           <kbd>
         <img src="https://i.postimg.cc/MG3LLd2g/chase.png" height=80% width=80%>
@@ -35,7 +35,7 @@
 
       <!-- Marshall -->
       <button id="bt" type="button"
-          onclick="javascript:PlaySound('assets/audio/marshall-audio.wav');">
+          onclick="javascript:playSoundClick('assets/audio/marshall-audio.wav');">
       <div data-key="50" class="key-marshall">
         <kbd>
       <img src="https://i.postimg.cc/h4dYCLC3/marshall.png" height=80% width=80%>
@@ -46,7 +46,7 @@
 
       <!-- Skye -->
       <button id="bt" type="button"
-          onclick="javascript:PlaySound('assets/audio/skye-audio.wav');">
+          onclick="javascript:playSoundClick('assets/audio/skye-audio.wav');">
         <div data-key="51" class="key-skye">
           <kbd>
         <img src="https://i.postimg.cc/C1WQh5KN/skye.png" height=85% width=85%>
@@ -57,7 +57,7 @@
 
       <!-- Rubble -->
       <button id="bt" type="button"
-          onclick="javascript:PlaySound('assets/audio/rubble-audio.wav');">
+          onclick="javascript:playSoundClick('assets/audio/rubble-audio.wav');">
       <div data-key="52" class="key-rubble">
         <kbd>
         <img src="https://i.postimg.cc/d3rSLFkK/rubble.png" height=80% width=80%>
@@ -68,7 +68,7 @@
 
       <!-- Rocky -->
       <button id="bt" type="button"
-          onclick="javascript:PlaySound('assets/audio/rocky-audio.wav');">
+          onclick="javascript:playSoundClick('assets/audio/rocky-audio.wav');">
       <div data-key="53" class="key-rocky">
         <kbd>
         <img src="https://i.postimg.cc/8zvPNKbQ/rocky.png" height=70% width=70%>
@@ -79,7 +79,7 @@
 
       <!-- Zuma -->
       <button id="bt" type="button"
-          onclick="javascript:PlaySound('assets/audio/zuma-audio.wav');">
+          onclick="javascript:playSoundClick('assets/audio/zuma-audio.wav');">
       <div data-key="54" class="key-zuma">
         <kbd>
       <img src="https://i.postimg.cc/5NWRDXT9/zuma.png" height=80% width=80%>
@@ -117,7 +117,6 @@
 
     var keysChase = document.querySelectorAll('.key-chase'); // Selects Chase div
     keysChase.forEach(key => key.addEventListener('transitionend', removeTransition)); // This plays  the pup's position
-    keysChase.forEach(click => click.addEventListener('transitionend', removeTransition));;
     keysChase.forEach(key => key.addEventListener("click", function() {
       console.log("Chase");
     })); // This logs the pup name in the console
@@ -156,10 +155,11 @@
 
     window.addEventListener('keydown', playSound); // This plays the audio clip
 
-    function PlaySound(path) {
+    function playSoundClick(path) {
       var audioElement = document.createElement('audio');
       audioElement.setAttribute('src', path);
       audioElement.play();
+      keysChase.forEach(key => key.addEventListener('transitionend', removeTransition)); // This plays  the pup's position
     }
   </script>
 
