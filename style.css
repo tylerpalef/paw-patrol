@@ -1,9 +1,6 @@
-/* @media all and (max-width: 991px) {  */
+@media all and (max-width: 991px) {
   html {
-    font-size: 10px; /* Dictates the size of the pup grid */
-  }
-
-  body,html {
+    font-size: 8px; /* Dictates the size of the pup grid */
     margin: 0;
     padding: 0;
     font-family: 'Baloo Bhaijaan', cursive; /* Just setting the font for the numbers  */
@@ -15,9 +12,9 @@
 
   .wrapper{
     z-index: 1;
-    position: fixed;
-    top: 4rem;
-    margin: 0 100px;
+    position: relative;
+    bottom: 68em;
+    right: 6em;
   }
   .keys {
     display: grid;
@@ -105,8 +102,8 @@
     color: white;
   }
 
-/* }
-@media all and (max-width: 768px) {
+}
+/* @media all and (max-width: 768px) {
 
 }
 @media all and (max-width: 480px) {
