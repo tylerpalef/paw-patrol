@@ -91,6 +91,7 @@
     </div>
   </div>
 
+  <!-- These are all the audio clips -->
   <audio data-key="49" src="assets/audio/chase-audio.wav"></audio>
   <audio data-key="50" src="assets/audio/marshall-audio.wav"></audio>
   <audio data-key="51" src="assets/audio/skye-audio.wav"></audio>
@@ -107,7 +108,7 @@
     function playSound(e) {
       var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
       var key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-      if (!audio) return;
+      if (!audio) return; // Stops function if there are no keys that match
 
       key.classList.add('playing');
       audio.currentTime = 0;
@@ -115,10 +116,12 @@
     }
 
     var keysChase = document.querySelectorAll('.key-chase'); // Selects Chase div
-    keysChase.forEach(key => key.addEventListener('transitionend', removeTransition)); // This resets the pup's position
+    keysChase.forEach(key => key.addEventListener('transitionend', removeTransition)); // This plays  the pup's position
+    keysChase.forEach(click => click.addEventListener('transitionend', removeTransition));;
     keysChase.forEach(key => key.addEventListener("click", function() {
       console.log("Chase");
     })); // This logs the pup name in the console
+
 
     var keysMarshall = document.querySelectorAll('.key-marshall'); // Selects Marshall div
     keysMarshall.forEach(key => key.addEventListener('transitionend', removeTransition));
@@ -152,8 +155,6 @@
 
 
     window.addEventListener('keydown', playSound); // This plays the audio clip
-
-    window.addEventListener('click', playSound); // This should play the audio clip
 
     function PlaySound(path) {
       var audioElement = document.createElement('audio');
