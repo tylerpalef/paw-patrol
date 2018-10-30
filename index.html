@@ -3,116 +3,169 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Very important for responsive design -->
   <title>Paw Patrol</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+  <!--This links to the css file -->
+  <script src="javascript.js" type="text/javascript"></script>
+  <!-- This is to link to the JS file -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet"> <!-- Font stylesheet reference -->
 </head>
 
 <body>
   <div class="bg">
-    <img src="https://i.postimg.cc/VvvGY1Yg/paw-patrolbg.jpg" height=100% width=100%>
+    <img src="https://i.postimg.cc/VvvGY1Yg/paw-patrolbg.jpg" height=100% width=100%> <!-- BG image set to fill the page -->
   </div>
-    <div class="wrapper">
-      <div class="keys">
-        <!-- Use keycode.info to determine the key values  -->
-        <!-- Chase -->
+  <div class="wrapper">
+    <!-- Wrapper of the grid -->
+    <div class="keys">
+      <!-- This is the grid of the pups -->
+      <!-- Use keycode.info to determine the key values  -->
+
+      <!-- Chase -->
+      <button id="bt" type="button"
+          onclick="javascript:playSoundClick('assets/audio/chase-audio.wav');">
         <div data-key="49" class="key-chase">
           <kbd>
         <img src="https://i.postimg.cc/MG3LLd2g/chase.png" height=80% width=80%>
       </kbd>
           <span class="sound">1</span>
         </div>
+        </button>
 
-        <!-- Marshall -->
-        <div data-key="50" class="key-marshall">
-          <kbd>
+      <!-- Marshall -->
+      <button id="bt" type="button"
+          onclick="javascript:playSoundClick('assets/audio/marshall-audio.wav');">
+      <div data-key="50" class="key-marshall">
+        <kbd>
       <img src="https://i.postimg.cc/h4dYCLC3/marshall.png" height=80% width=80%>
     </kbd>
-          <span class="sound">2</span>
-        </div>
+        <span class="sound">2</span>
+      </div>
+        </button>
 
-        <!-- Skye -->
+      <!-- Skye -->
+      <button id="bt" type="button"
+          onclick="javascript:playSoundClick('assets/audio/skye-audio.wav');">
         <div data-key="51" class="key-skye">
           <kbd>
-      <img src="https://i.postimg.cc/C1WQh5KN/skye.png" height=85% width=85%>
-      </kbd>
+        <img src="https://i.postimg.cc/C1WQh5KN/skye.png" height=85% width=85%>
+        </kbd>
           <span class="sound">3</span>
         </div>
+      </button>
 
-        <!-- Rubble -->
-        <div data-key="52" class="key-rubble">
-          <kbd>
+      <!-- Rubble -->
+      <button id="bt" type="button"
+          onclick="javascript:playSoundClick('assets/audio/rubble-audio.wav');">
+      <div data-key="52" class="key-rubble">
+        <kbd>
         <img src="https://i.postimg.cc/d3rSLFkK/rubble.png" height=80% width=80%>
       </kbd>
-          <span class="sound">4</span>
-        </div>
+        <span class="sound">4</span>
+      </div>
+        </button>
 
-        <!-- Rocky -->
-        <div data-key="53" class="key-rocky">
-          <kbd>
+      <!-- Rocky -->
+      <button id="bt" type="button"
+          onclick="javascript:playSoundClick('assets/audio/rocky-audio.wav');">
+      <div data-key="53" class="key-rocky">
+        <kbd>
         <img src="https://i.postimg.cc/8zvPNKbQ/rocky.png" height=70% width=70%>
       </kbd>
-          <span class="sound">5</span>
-        </div>
+        <span class="sound">5</span>
+      </div>
+        </button>
 
-        <!-- Zuma -->
-        <div data-key="54" class="key-zuma">
-          <kbd>
+      <!-- Zuma -->
+      <button id="bt" type="button"
+          onclick="javascript:playSoundClick('assets/audio/zuma-audio.wav');">
+      <div data-key="54" class="key-zuma">
+        <kbd>
       <img src="https://i.postimg.cc/5NWRDXT9/zuma.png" height=80% width=80%>
       </kbd>
-          <span class="sound">6</span>
-        </div>
-
+        <span class="sound">6</span>
       </div>
+        </button>
+
     </div>
+  </div>
 
-    <audio data-key="49" src="assets/audio/chase-audio.wav"></audio>
-    <audio data-key="50" src="assets/audio/marshall-audio.wav"></audio>
-    <audio data-key="51" src="assets/audio/skye-audio.wav"></audio>
-    <audio data-key="52" src="assets/audio/rubble-audio.wav"></audio>
-    <audio data-key="53" src="assets/audio/rocky-audio.wav"></audio>
-    <audio data-key="54" src="assets/audio/zuma-audio.wav"></audio>
+  <!-- These are all the audio clips -->
+  <audio data-key="49" src="assets/audio/chase-audio.wav"></audio>
+  <audio data-key="50" src="assets/audio/marshall-audio.wav"></audio>
+  <audio data-key="51" src="assets/audio/skye-audio.wav"></audio>
+  <audio data-key="52" src="assets/audio/rubble-audio.wav"></audio>
+  <audio data-key="53" src="assets/audio/rocky-audio.wav"></audio>
+  <audio data-key="54" src="assets/audio/zuma-audio.wav"></audio>
 
-    <script>
-      function removeTransition(e) {
-        if (e.propertyName !== 'transform') return;
-        e.target.classList.remove('playing');
-      }
+  <script>
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
 
-      function playSound(e) {
-        var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-        var key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-        if (!audio) return;
+    function playSound(e) {
+      var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      var key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      if (!audio) return; // Stops function if there are no keys that match
 
-        key.classList.add('playing');
-        audio.currentTime = 0;
-        audio.play();
-      }
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
 
-      var keysChase = document.querySelectorAll('.key-chase'); // Selects Chase div
-      keysChase.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-      var keysMarshall = document.querySelectorAll('.key-marshall'); // Selects Marshall div
-      keysMarshall.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-      var keysSkye = document.querySelectorAll('.key-skye'); // Selects Skye div
-      keysSkye.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-      var keysRubble = document.querySelectorAll('.key-rubble'); // Selects Rubble
-      keysRubble.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-      var keysRocky = document.querySelectorAll('.key-rocky'); // Selects Rocky
-      keysRocky.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-      var keysZuma = document.querySelectorAll('.key-zuma'); // Selects Zuma
-      keysZuma.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-      window.addEventListener('keydown', playSound); // This places the audio clip
+    var keysChase = document.querySelectorAll('.key-chase'); // Selects Chase div
+    keysChase.forEach(key => key.addEventListener('transitionend', removeTransition)); // This plays  the pup's position
+    keysChase.forEach(key => key.addEventListener("click", function() {
+      console.log("Chase");
+    })); // This logs the pup name in the console
 
 
-    </script>
+    var keysMarshall = document.querySelectorAll('.key-marshall'); // Selects Marshall div
+    keysMarshall.forEach(key => key.addEventListener('transitionend', removeTransition));
+    keysMarshall.forEach(key => key.addEventListener("click", function() {
+      console.log("Marshall");
+    }));
 
+    var keysSkye = document.querySelectorAll('.key-skye'); // Selects Skye div
+    keysSkye.forEach(key => key.addEventListener('transitionend', removeTransition));
+    keysSkye.forEach(key => key.addEventListener("click", function() {
+      console.log("Skye");
+    }));
+
+    var keysRubble = document.querySelectorAll('.key-rubble'); // Selects Rubble
+    keysRubble.forEach(key => key.addEventListener('transitionend', removeTransition));
+    keysRubble.forEach(key => key.addEventListener("click", function() {
+      console.log("Rubble");
+    }));
+
+    var keysRocky = document.querySelectorAll('.key-rocky'); // Selects Rocky
+    keysRocky.forEach(key => key.addEventListener('transitionend', removeTransition));
+    keysRocky.forEach(key => key.addEventListener("click", function() {
+      console.log("Rocky");
+    }));
+
+    var keysZuma = document.querySelectorAll('.key-zuma'); // Selects Zuma
+    keysZuma.forEach(key => key.addEventListener('transitionend', removeTransition));
+    keysZuma.forEach(key => key.addEventListener("click", function() {
+      console.log("Zuma");
+    }));
+
+
+    window.addEventListener('keydown', playSound); // This plays the audio clip on key keydown
+
+    function playSoundClick(path) { // This plays the audio clip on mouse click of the button
+      var audioElement = document.createElement('audio');
+      var key = document.createElement('audio');
+
+      audioElement.setAttribute('src', path);
+
+      key.classList.add('playing');
+      audioElement.currentTime = 0;
+      audioElement.play();
+    }
+  </script>
 
 </body>
 
