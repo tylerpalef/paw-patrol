@@ -153,13 +153,15 @@
     }));
 
 
-    window.addEventListener('keydown', playSound); // This plays the audio clip
+    window.addEventListener('keydown', playSound); // This plays the audio clip on key keydown
 
-    function playSoundClick(path) {
+    function playSoundClick(path) { // This plays the audio clip on mouse click of the button
       var audioElement = document.createElement('audio');
+      var key = document.createElement('audio');
       audioElement.setAttribute('src', path);
+      key.classList.add('playing');
+      audioElement.currentTime = 0;
       audioElement.play();
-      keysChase.forEach(key => key.addEventListener('transitionend', removeTransition)); // This plays  the pup's position
     }
   </script>
 
