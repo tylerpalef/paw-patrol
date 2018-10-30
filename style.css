@@ -1,4 +1,3 @@
-@media all and (min-width: 480px) {
   html {
     font-size: 10px; /* Dictates the size of the pup grid */
     margin: 0;
@@ -14,17 +13,21 @@
     position: fixed;
     height: 100%;
     width: 100%;
-
   }
+
+  .keys {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 170%;
+    position: absolute;
+    left: 50%;
+
+    }
 
   .wrapper{
     z-index: 1;
     position: absolute;
-  }
-  .keys {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    padding-left: 33%;
   }
 
   .key-chase {
@@ -103,8 +106,4 @@
     text-transform: uppercase;
     color: white;
   }
-
-}
-
-@media all and (min-width: 480px)
 }
