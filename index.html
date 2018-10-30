@@ -89,32 +89,24 @@
         audio.play();
       }
 
-      window.addEventListener('mousedown', function(e){
-        console.log('hello')
-      });
-
       const keysChase = document.querySelectorAll('.key-chase');
       keysChase.forEach(key => key.addEventListener('transitionend', removeTransition));
-      window.addEventListener('keydown', playSound);
 
       const keysMarshall = document.querySelectorAll('.key-marshall');
       keysMarshall.forEach(key => key.addEventListener('transitionend', removeTransition));
-      window.addEventListener('keydown', playSound);
 
       const keysSkye = document.querySelectorAll('.key-skye');
       keysSkye.forEach(key => key.addEventListener('transitionend', removeTransition));
-      window.addEventListener('keydown', playSound);
 
       const keysRubble = document.querySelectorAll('.key-rubble');
       keysRubble.forEach(key => key.addEventListener('transitionend', removeTransition));
-      window.addEventListener('keydown', playSound);
 
       const keysRocky = document.querySelectorAll('.key-rocky');
       keysRocky.forEach(key => key.addEventListener('transitionend', removeTransition));
-      window.addEventListener('keydown', playSound);
 
       const keysZuma = document.querySelectorAll('.key-zuma');
       keysZuma.forEach(key => key.addEventListener('transitionend', removeTransition));
+
       window.addEventListener('keydown', playSound);
     </script>
 
