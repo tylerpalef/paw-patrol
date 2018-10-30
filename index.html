@@ -110,7 +110,7 @@
       var key = document.querySelector(`div[data-key="${e.keyCode}"]`);
       if (!audio) return; // Stops function if there are no keys that match
 
-      key.classList.add('playing');
+      key.classList.add('playing'); // This is what causes the transform on the pups
       audio.currentTime = 0;
       audio.play();
     }
