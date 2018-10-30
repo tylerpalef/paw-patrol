@@ -1,31 +1,33 @@
-/* @media all and (max-width: 991px) {  */
   html {
     font-size: 10px; /* Dictates the size of the pup grid */
-  }
-
-  body,html {
     margin: 0;
     padding: 0;
     font-family: 'Baloo Bhaijaan', cursive; /* Just setting the font for the numbers  */
   }
 
-  .background{
+  .bg{
     z-index: 0;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: 100%;
   }
 
-  .wrapper{
-    z-index: 1;
-    position: fixed;
-    top: 4rem;
-    margin: 0 100px;
-  }
   .keys {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 70em;
-    height: 49em;
-    padding-left: 25%;
-    padding-top: 5%;
+    width: 170%;
+    position: absolute;
+    left: 50%;
+
+    }
+
+  .wrapper{
+    z-index: 1;
+    position: absolute;
+    padding-left: 33%;
   }
 
   .key-chase {
@@ -84,7 +86,7 @@
     margin: 1rem;
     transition: all .07s ease;
     text-align: center;
-    background: rgba(187,136,0.2);
+    background: rgba(1, 87,136,0.2);
     text-shadow: 0 0 .5rem black;
   }
 
@@ -105,9 +107,14 @@
     color: white;
   }
 
-/* }
-@media all and (max-width: 768px) {
+  @media only screen and (max-width: 1210px) {
+    .keys{
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 200%;
+    }
 
-}
-@media all and (max-width: 480px) {
-} */
+@media only screen and (max-width: 600px) {
+  .keys{
+    grid-template-columns: 1fr 1fr;
+    width: 205%;
+  }
