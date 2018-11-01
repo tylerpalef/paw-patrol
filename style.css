@@ -126,7 +126,9 @@
   @media only screen and (max-width: 1210px) {
     .keys {
       grid-template-columns: 1fr 1fr 1fr;
-      width: 210%;
+      width: 250%;
+      top: 12vh;
+      left: 2.5vw;
     }
 
     @media only screen and (max-width: 600px) {
