@@ -126,11 +126,13 @@
   @media only screen and (max-width: 1210px) {
     .keys {
       grid-template-columns: 1fr 1fr 1fr;
-      width: 200%;
+      width: 210%;
     }
 
     @media only screen and (max-width: 600px) {
       .keys {
         grid-template-columns: 1fr 1fr;
-        width: 205%;
+        width: 250%;
+        top: 5vh;
+        left: 2.5vw;
       }
