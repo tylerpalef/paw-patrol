@@ -20,10 +20,10 @@
   .keys { /* This is the main grid with the pups */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 240%;
+    width: 160%;
     position: absolute;
-    left: 9vw;
-    top: 5.5vh;
+    top: 15vh;
+    left: 22vw;
   }
 
   .wrapper { /* This houses the pups on the page */
@@ -127,15 +127,15 @@
   @media only screen and (max-width: 1210px) {
     .keys {
       grid-template-columns: 1fr 1fr 1fr;
-      width: 250%;
-      top: 12vh;
-      left: 9.5vw;
+      width: 220%;
+      top: 18vh;
+      left: 12.5vw;
     }
 
     @media only screen and (max-width: 600px) {
       .keys {
         grid-template-columns: 1fr 1fr;
         width: 250%;
-        top: 5vh;
-        left: 2.5vw;
+        top: 20vh;
+        left: 9vw;
       }
